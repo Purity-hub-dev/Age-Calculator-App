@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --Purple: hsl(259, 100%, 65%);
+  --Light-red: hsl(0, 100%, 67%);
+  --White: hsl(0, 0%, 100%);
+  --Off-white: hsl(0, 0%, 94%);
+  --Light-grey: hsl(0, 0%, 86%);
+  --Smokey-grey: hsl(0, 1%, 44%);
+  --Off-black: hsl(0, 0%, 8%);
+  --bgcolor: rgb(31, 75, 78);
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* background: rgb(31, 75, 78); */
+  background-color: hsl(0, 0%, 73%);
+}
+.general-container {
+  background-color: var(--Off-white);
+  padding: 40px;
+  border-radius: 10px 10px 150px 10px;
+  width: 40%;
+  margin: auto;
+  /* background: rgb(43, 77, 79); */
+}
+.input-container {
+  display: flex;
+  gap: 20px;
+}
+input {
+  width: 120px;
+  padding: 12px;
+  margin: 5px 0;
+  background: var(--White);
+  outline: none;
+  border: 1px solid var(--Light-grey);
+  border-radius: 5px;
+}
+input:hover {
+  cursor: pointer;
+  border: 1px solid var(--Purple);
+  transition-delay: 0.2s;
+  transition: ease-in-out;
+}
+input:focus {
+  background-color: var(--Purple);
+  transition: all 2s;
+}
+input::placeholder {
+  color: var(--Smokey-grey);
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+label span {
+  font-size: 12px;
+}
+hr {
+  margin-top: 30px;
+  margin-bottom: 25px;
+  border: 0.01px solid var(--Light-grey);
+  position: relative;
+}
+aside .calculate-btn {
+  /* display: flex;
+  justify-items: center; */
+  overflow: hidden;
+  position: fixed;
+  right: 31%;
+  top: 205px;
+  border: none;
+  padding: 5px;
+  border-radius: 50%;
+  background: var(--Purple);
+}
+.calculate-btn:hover {
+  background: var(--Off-black);
+  cursor: pointer;
+  transition: ease-in-out;
+  transition-delay: 0.02s;
+}
+.input-output .dash {
+  color: var(--Purple);
+}
+.input-output h1 {
+  font-size: 50px;
+  color: var(--Off-black);
+}
+label .error {
+  color: var(--Light-red);
+  font-size: 14px;
+}
+.input-container.error label span {
+  color: var(--Light-red);
+}
+.input-container.error label input {
+  border: 1px solid var(--Light-red);
+}
+.input-container.error input,
+::placeholder {
+  color: var(--Light-red);
+}
+@media (max-width: 500px) {
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100px; */
+  }
+  .general-container {
+    padding: 25px 40px;
+    width: 80%;
+    height: 400px;
+  }
+  input {
+    width: 70px;
+  }
+  hr {
+    margin-top: 40px;
+    margin-bottom: 50px;
+  }
+  .input-output h1 {
+    font-size: 40px;
+  }
+  aside .calculate-btn {
+    position: fixed;
+    right: 211px;
+    top: 352px;
+    padding: 5px;
+    overflow: hidden;
+    position: fixed;
+  }
+}
